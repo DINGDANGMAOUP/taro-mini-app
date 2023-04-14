@@ -1,3 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: 'test'
+  navigationBarTitleText: 'test',
+  "usingComponents": {}
 })
