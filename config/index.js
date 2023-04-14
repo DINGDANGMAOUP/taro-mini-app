@@ -10,6 +10,7 @@ const config = {
     '@/utils': resolve(__dirname, '..', 'src/utils'),
     '@/package': resolve(__dirname, '..', 'package.json'),
     '@/project': resolve(__dirname, '..', 'project.config.json'),
+    '@/assets': resolve(__dirname, '..', 'src/assets'),
   },
   projectName: 'mini-app',
   date: '2023-4-14',
