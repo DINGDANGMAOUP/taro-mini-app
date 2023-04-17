@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import {resolve} from 'path'
 
 const config = {
   // eslint-disable-next-line no-undef
@@ -23,15 +23,13 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
+  lazyCodeLoading: 'requiredComponents',
   compiler: {
     type: 'webpack5',
     prebundle: {
@@ -45,9 +43,7 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-
-        }
+        config: {}
       },
       url: {
         enable: true,
@@ -71,8 +67,7 @@ const config = {
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true

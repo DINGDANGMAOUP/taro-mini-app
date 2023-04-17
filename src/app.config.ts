@@ -1,8 +1,8 @@
 export default defineAppConfig({
   pages: [
     'pages/home/index',
-    'pages/user/index',
     'pages/index/index',
+    'pages/user/index',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -24,6 +24,12 @@ export default defineAppConfig({
         selectedIconPath: "assets/tabbar/home_select.png",
       },
       {
+        pagePath: 'pages/index/index',
+        text: '分类',
+        iconPath: "assets/tabbar/user.png",
+        selectedIconPath: "assets/tabbar/user_select.png",
+      },
+      {
         pagePath: 'pages/user/index',
         text: '用户',
         iconPath: "assets/tabbar/user.png",
@@ -32,3 +38,5 @@ export default defineAppConfig({
     ],
   },
 })
+
+
