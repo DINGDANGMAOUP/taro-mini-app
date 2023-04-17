@@ -29,7 +29,6 @@ const config = {
     options: {}
   },
   framework: 'react',
-  lazyCodeLoading: 'requiredComponents',
   compiler: {
     type: 'webpack5',
     prebundle: {
