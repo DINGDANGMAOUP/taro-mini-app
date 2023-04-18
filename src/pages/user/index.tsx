@@ -1,8 +1,9 @@
-import {OpenData, View} from "@tarojs/components";
+import { View} from "@tarojs/components";
 import React from "react";
 import {getWindowHeight} from "@/utils/style";
-import {AtAvatar, AtGrid} from "taro-ui";
+import { AtGrid} from "taro-ui";
 import Activity from "@/pages/activity";
+import Profile from "@/pages/user/profile";
 import './index.scss'
 
 const Index: React.FC = props => {
@@ -17,14 +18,7 @@ const Index: React.FC = props => {
         className='user__wrap'
         style={{height: getWindowHeight()}}
       >
-        <View className='at-row'>
-          <View className='at-col'>
-            <AtAvatar circle openData={{type: 'userAvatarUrl'}}></AtAvatar>
-          </View>
-          <View className='at-col'>
-            <OpenData type='userNickName' />
-          </View>
-        </View>
+    <Profile />
         <AtGrid data={
           [
             {
