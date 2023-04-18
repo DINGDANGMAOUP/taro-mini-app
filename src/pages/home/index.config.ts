@@ -1,4 +1,5 @@
 export default definePageConfig({
   navigationBarTitleText: '首页',
-  "usingComponents": {}
+  "usingComponents": {},
+  navigationBarBackgroundColor: '#a61b1b',
 })

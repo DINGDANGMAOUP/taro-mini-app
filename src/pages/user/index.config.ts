@@ -1,4 +1,5 @@
 export default definePageConfig({
   navigationBarTitleText: '用户',
-  "usingComponents": {}
+  navigationBarBackgroundColor: '#fff0d4',
+  "usingComponents": {},
 })

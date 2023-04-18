@@ -1,0 +1,25 @@
+.user__profile {
+  background-color: #fff0d4;
+  background-image: url("../../../assets/backgroud_profile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15%;
+}
+
+//居中 垂直 水平
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user__profile__avatar{
+  @include center();
+}
+.user__profile__nickname {
+  @include center();
+}
+
+.user__profile__button {
+  @include center();
+}

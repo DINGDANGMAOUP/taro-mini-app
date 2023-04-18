@@ -1,7 +1,7 @@
 export default defineAppConfig({
   pages: [
     'pages/home/index',
-    'pages/index/index',
+    'pages/notice/index',
     'pages/user/index',
   ],
   window: {
@@ -25,8 +25,8 @@ export default defineAppConfig({
         selectedIconPath: "assets/tabbar/home_select.png",
       },
       {
-        pagePath: 'pages/index/index',
-        text: '分类',
+        pagePath: 'pages/notice/index',
+        text: '消息',
         iconPath: "assets/tabbar/user.png",
         selectedIconPath: "assets/tabbar/user_select.png",
       },

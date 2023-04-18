@@ -12,7 +12,7 @@ const tabBarStore = observable<tabBarStoreType>({
   current: 0,
   tarBarList: [
     {title: '首页', iconType: 'home', url: '/pages/home/index'},
-    {title: '消息', iconType: 'bell', text: '99', max: 99, url: '/pages/index/index'},
+    {title: '消息', iconType: 'bell', text: '99', max: 99, url: '/pages/notice/index'},
     {title: '我', iconType: 'user', url: '/pages/user/index'}
   ],
   setCurrent(index: number) {
