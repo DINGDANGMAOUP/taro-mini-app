@@ -1,3 +1,4 @@
+
 export default defineAppConfig({
   pages: [
     'pages/home/index',
@@ -21,20 +22,20 @@ export default defineAppConfig({
       {
         pagePath: 'pages/home/index',
         text: '首页',
-        iconPath: "assets/tabbar/home.png",
-        selectedIconPath: "assets/tabbar/home_select.png",
+        // iconPath: "assets/tabbar/home.png",
+        // selectedIconPath: "assets/tabbar/home_select.png",
       },
       {
         pagePath: 'pages/notice/index',
         text: '消息',
-        iconPath: "assets/tabbar/user.png",
-        selectedIconPath: "assets/tabbar/user_select.png",
+        // iconPath: "assets/tabbar/user.png",
+        // selectedIconPath: "assets/tabbar/user_select.png",
       },
       {
         pagePath: 'pages/user/index',
         text: '用户',
-        iconPath: "assets/tabbar/user.png",
-        selectedIconPath: "assets/tabbar/user_select.png",
+        // iconPath: "assets/tabbar/user.png",
+        // selectedIconPath: "assets/tabbar/user_select.png",
       },
     ],
   },
