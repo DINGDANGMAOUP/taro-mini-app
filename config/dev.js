@@ -25,6 +25,6 @@ module.exports = {
   },
   h5: {},
   plugins: [
-    '@tarojs/plugin-react-devtools'
+    '@tarojs/plugin-react-devtools',
   ],
 }

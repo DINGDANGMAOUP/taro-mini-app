@@ -22,7 +22,6 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/store/*": ["./src/store/*"],
       "@/components/*": ["./src/components/*"],
@@ -30,6 +29,9 @@
       "@/package": ["./package.json"],
       "@/project": ["./project.config.json"],
       "@/assets/*": ["./src/assets/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/service/*": ["./src/services/*"],
+
     }
   },
   "include": ["./src", "./types"],

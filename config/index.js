@@ -3,7 +3,6 @@ import {resolve} from 'path'
 const config = {
   // eslint-disable-next-line no-undef
   alias: {
-    '@/': resolve(__dirname, '..', 'src'),
     '@/pages': resolve(__dirname, '..', 'src/pages'),
     '@/store': resolve(__dirname, '..', 'src/store'),
     '@/components': resolve(__dirname, '..', 'src/components'),
@@ -11,6 +10,8 @@ const config = {
     '@/package': resolve(__dirname, '..', 'package.json'),
     '@/project': resolve(__dirname, '..', 'project.config.json'),
     '@/assets': resolve(__dirname, '..', 'src/assets'),
+    '@/api': resolve(__dirname, '..', 'src/api'),
+    '@/service': resolve(__dirname, '..', 'src/service'),
   },
   projectName: 'mini-app',
   date: '2023-4-14',
@@ -22,7 +23,9 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: [
+    '@tarojs/plugin-mock'
+  ],
   defineConstants: {},
   copy: {
     patterns: [],

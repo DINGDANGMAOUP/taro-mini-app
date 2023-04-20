@@ -2,22 +2,25 @@
 import {AtTabBar} from "taro-ui";
 import {useStores} from "@/store";
 import { observer } from 'mobx-react'
+import {useEffect} from "react";
+
 import './index.scss'
-
-
 
 
 const Index = () => {
   const {tabBarStore} = useStores();
-  const {tarBarList,current} = tabBarStore;
- const switchTab =(idx: number)=> {
+  const {tabBarList,current} = tabBarStore;
+  useEffect(() => {
+    tabBarStore.init();
+  }, []);
+  const switchTab =(idx: number)=> {
    tabBarStore.setCurrent(idx)
   }
 
   return (
     <AtTabBar
       fixed
-      tabList={tarBarList}
+      tabList={tabBarList}
       onClick={switchTab}
       current={current}
     />

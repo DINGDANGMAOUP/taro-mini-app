@@ -1,4 +1,4 @@
-import {View} from '@tarojs/components';
+import { View} from '@tarojs/components';
 import React from 'react';
 
 
@@ -6,7 +6,7 @@ const Index: React.FC = () => {
 
   return (
     <View>
-      home
+home
     </View>
   );
 };
