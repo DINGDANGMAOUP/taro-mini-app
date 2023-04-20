@@ -1,6 +1,5 @@
-
-import {AtTabBar} from "taro-ui";
 import {useStores} from "@/store";
+import {AtTabBar} from "taro-ui";
 import { observer } from 'mobx-react'
 import {useEffect} from "react";
 

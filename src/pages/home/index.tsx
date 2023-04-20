@@ -1,9 +1,12 @@
 import { View} from '@tarojs/components';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 const Index: React.FC = () => {
 
+  useEffect(() => {
+    console.log('home');
+  }, []);
   return (
     <View>
 home
