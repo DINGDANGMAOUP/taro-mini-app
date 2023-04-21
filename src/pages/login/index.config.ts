@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: 'loading',
+  navigationBarTitleText: '登入',
 })

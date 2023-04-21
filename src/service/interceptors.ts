@@ -14,7 +14,7 @@ const customInterceptor = (chain:any) => {
                     result.success = true
                 } else {
                     // 请求接口错误提示，可通过参数中加入 tips: false 关闭
-                    if(requestParams.tips && result.msg) Taro.showToast({ title: result.msg, icon: 'none' })
+                    if(requestParams.tips && result.errMessage) Taro.showToast({ title: result.errMessage, icon: 'none' })
                     // 登录过期或未登录 需要与后端共同定义
                     if(result.code === 401) {
                         // 跳转登陆 清空用户信息等 处理
@@ -57,7 +57,7 @@ const customInterceptor = (chain:any) => {
             default:
                 console.log('请开发者检查请求拦截未匹配到错误,返回statusCode :>> ', res.statusCode)
                 break
-            
+
         }
     })
 }

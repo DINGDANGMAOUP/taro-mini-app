@@ -16,7 +16,7 @@ const Index = () => {
   }, []);
   return (
     <View className='index'>
-      loading
+      login
     </View>
   );
 };
