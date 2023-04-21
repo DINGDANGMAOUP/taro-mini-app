@@ -2,7 +2,7 @@ import {observable} from 'mobx'
 import Taro from "@tarojs/taro";
 import Api from "@/api";
 
-interface tabBarStoreType {
+interface TabBarStoreType {
   loading: boolean,
   current: number,
   appTabBar: Array<{ title: string, iconPrefixClass?: string, iconType?: string, url: string }>,
@@ -12,7 +12,7 @@ interface tabBarStoreType {
   setLoading(loading: boolean): void
 }
 
-const tabBarStore = observable<tabBarStoreType>({
+const tabBarStore = observable<TabBarStoreType>({
   loading: true,
   current: 0,
   appTabBar: [],
