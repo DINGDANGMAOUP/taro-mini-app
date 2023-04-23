@@ -2,7 +2,7 @@
     "miniprogramRoot": "dist/",
     "projectname": "mini-app",
     "description": "project for taro",
-    "appid": "wxfcc161e7c682df93",
+    "appid": "wx21c3201fde5650b0",
     "setting": {
         "urlCheck": true,
         "es6": false,

@@ -16,7 +16,6 @@ const Index = () => {
   const switchTab = (idx: number) => {
     tabBarStore.setCurrent(idx)
   }
-
   return (
     <>
       {loading ? <></> :
