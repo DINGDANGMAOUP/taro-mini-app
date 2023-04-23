@@ -5,7 +5,6 @@ import Api from "@/api";
 interface TabBarStoreType {
   loading: boolean,
   current: number,
-  appTabBar: Array<{ title: string, iconPrefixClass?: string, iconType?: string, url: string }>,
   tabBarList: Array<API_TYPE.TabBar>,
   init(): void,
   setCurrent(index: number): void
@@ -15,7 +14,6 @@ interface TabBarStoreType {
 const tabBarStore = observable<TabBarStoreType>({
   loading: true,
   current: 0,
-  appTabBar: [],
   tabBarList: [
   ],
   //获取tabBar配置
