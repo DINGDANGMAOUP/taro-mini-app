@@ -11,6 +11,9 @@ export default defineAppConfig({
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   },
+  usingComponents: Object.assign({
+    iconfont: `components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}`,
+  }),
   lazyCodeLoading: 'requiredComponents',
   tabBar: {
     custom: true,
