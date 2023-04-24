@@ -6,38 +6,30 @@
   height: 100vh;
 }
 
-//透明 浮动 垂直水平居中
-.login_form {
-  width: 438px;
-  height: 300px;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
+//内容居中
+.login_title {
+  height: 45vh;
+}
+//垂直元素间隔50px
+.login_form{
+  height: 35vh;
+  padding-top: 50px;
+}
+.login_bottom{
+  height: 20vh;
+  background-color: aqua;
 }
 
-// 鼠标聚焦下划线缓慢拉长
+////透明 浮动 垂直水平居中
+//.login_form {
+//  width: 438px;
+//  height: 300px;
+//  position: absolute;
+//  top: 55%;
+//  left: 50%;
+//  transform: translate(-50%, -50%);
+//  border-radius: 10px;
+//}
+//
 
-.login_input:hover {
-  width: 90%;
-  height: 70px;
-  margin-top: 20px;
-  margin-left: 20px;
-  padding-left: 20px;
-  outline: none;
-  transition: all 0.5s;
 
-}
-
-//文字居中 间隔20px
-.login_submit {
-  margin-top: 50px;
-  top: 10px;
-  width: 90%;
-  height: 70px;
-  border-radius: 10px;
-  background-color: #445ae3;
-  color: #fff;
-  border: none;
-}

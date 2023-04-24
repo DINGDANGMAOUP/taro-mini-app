@@ -1,9 +1,9 @@
 import {observer} from 'mobx-react'
 import {View} from '@tarojs/components'
-
-import {AtButton, AtInput} from "taro-ui";
 import React, {useEffect, useReducer} from "react";
 import Taro from "@tarojs/taro";
+import Title from "@/pages/login/components/title";
+import LoginForm from "@/pages/login/components/form";
 import './index.scss'
 
 
@@ -62,32 +62,42 @@ const Index: React.FC = () => {
   // }
   return (
     <View className='main_container'>
-      <View
-        className='login_form'
-      >
-        <AtInput
-          autoFocus
-          className='login_input'
-          name='username'
-          type='text'
-          placeholder='Username'
-          value={state.username}
-          onChange={handleUsernameChange}
-        />
-        <AtInput
-          autoFocus
-          className='login_input'
-          name='password'
-          type='password'
-          placeholder='Password'
-          value={state.password}
-          onChange={handlePasswordChange}
-        />
-        <AtButton
-          className='login_submit'
-          size='small' onClick={handleSubmit}
-        >Login</AtButton>
+      <View className='at-row at-row__align--end at-row__justify--center login_title'>
+        <Title />
       </View>
+      <View className='at-row at-row__justify--center login_form'>
+        <LoginForm />
+      </View>
+      <View className='at-row at-row__align--center at-row__justify--center login_bottom'>
+        create
+      </View>
+      {/*<View*/}
+      {/*  className='login_form'*/}
+      {/*>*/}
+
+        {/*<AtInput*/}
+        {/*  autoFocus*/}
+        {/*  className='login_input'*/}
+        {/*  name='username'*/}
+        {/*  type='text'*/}
+        {/*  placeholder='Username'*/}
+        {/*  value={state.username}*/}
+        {/*  onChange={handleUsernameChange}*/}
+        {/*/>*/}
+        {/*<AtInput*/}
+        {/*  autoFocus*/}
+        {/*  className='login_input'*/}
+        {/*  name='password'*/}
+        {/*  type='password'*/}
+        {/*  placeholder='Password'*/}
+        {/*  value={state.password}*/}
+        {/*  onChange={handlePasswordChange}*/}
+        {/*/>*/}
+        {/*<AtButton*/}
+        {/*  className='login_submit'*/}
+        {/*  size='small' onClick={handleSubmit}*/}
+        {/*>Login</AtButton>*/}
+      {/*</View>*/}
     </View>
   );
 };

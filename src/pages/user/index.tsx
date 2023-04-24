@@ -2,8 +2,8 @@ import { View} from "@tarojs/components";
 import React from "react";
 import {getWindowHeight} from "@/utils/style";
 import { AtGrid} from "taro-ui";
-import Activity from "@/pages/user/activity";
-import Profile from "@/pages/user/profile";
+import Activity from "@/pages/user/components/activity";
+import Profile from "@/pages/user/components/profile";
 import './index.scss'
 
 const Index: React.FC = props => {
