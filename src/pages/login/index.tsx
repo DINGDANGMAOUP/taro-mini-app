@@ -1,78 +1,92 @@
 import {observer} from 'mobx-react'
 import {View} from '@tarojs/components'
 
-import {AtButton, AtForm, AtInput} from "taro-ui";
-import React, { useLayoutEffect, useState} from "react";
+import {AtButton, AtInput} from "taro-ui";
+import React, {useEffect, useReducer} from "react";
 import Taro from "@tarojs/taro";
 import './index.scss'
 
 
+const initialForm: LOGIN.FormType = {username: '', password: ''};
+const reducer = (state: LOGIN.FormType, action: LOGIN.ActionType) => {
+  switch (action.type) {
+    case 'username': {
+      return {
+        ...state,
+        username: action.nextUsername,
+      };
+    }
+    case 'password': {
+      return {
+        ...state,
+        password: action.nextPassword
+      };
+    }
+    case 'reset': {
+      return initialForm;
+    }
+  }
+  throw Error('Unknown action: ' + action.type);
+}
 const Index: React.FC = () => {
 
 
-  useLayoutEffect(() => {
-    Taro.login().then(res=>{
+  useEffect(() => {
+    Taro.login().then(res => {
       console.log(res)
     })
   }, []);
-  const [form, setForm] = useState<FormType>({username: '', password: ''});
+  // const [form, setForm] = useState<FormType>({username: '', password: ''});
 
-  const handleChange = (action: actionType, v: string) => {
-    console.log(action, v)
-    switch (action) {
-      case 'username':
-        setForm({...form, username: v})
-        break;
-      case 'password':
-        setForm({...form, password: v})
-        break;
-    }
+  const [state, dispatch] = useReducer(reducer, initialForm);
+  const handleUsernameChange = (username?: string|number) => {
+    dispatch({nextUsername: username as string, type: 'username'})
   }
-  const onSubmit = () => {
+  const handlePasswordChange = (password?: string|number) => {
+    dispatch({nextPassword: password as string, type: 'password'})
   }
-  const onReset = () => {
-    setForm({username: '', password: ''})
+
+  const handleSubmit = () => {
+
   }
+
+  // const wxLogin = async () => {
+  //   const info = await Taro.getUserProfile({
+  //     desc: '登入使用',
+  //   })
+  //   console.log(info)
+  //   const {errMsg} = info
+  //   if (errMsg === 'getUserProfile:ok') {
+  //     Taro.switchTab({url: '/pages/home/index'})
+  //   }
+  // }
   return (
-
-    <View className='main'>
-      <View className='login'>
-        <View className='frame shadow'>
-          <View className='hint'>后台管理</View>
-
-          <AtForm
-            style={{backgroundColor: '#790a0a'}}
-            onSubmit={onSubmit}
-            onReset={onReset}
-          >
-            <AtInput
-              className='form_input'
-              name='username'
-              type='text'
-              placeholder='username'
-              value={form.username}
-              onChange={v => handleChange('username', v as string)}
-            />
-            <AtInput
-              className='form_input'
-              name='password'
-              type='password'
-              placeholder='password'
-              value={form.password}
-              onChange={v => handleChange('password', v as string)}
-            />
-            <AtButton className='bottom' circle type='primary' formType='submit' size='small'>Login</AtButton>
-            <AtButton className='reset' circle type='secondary' formType='reset' size='small'>重置</AtButton>
-          </AtForm>
-          <AtButton className='top' circle type='primary' size='small' onClick={async () => {
-            const info = await Taro.getUserProfile({
-              desc: '登入使用',
-            })
-            console.log(info)
-          }
-          }
-          >微信登入</AtButton>
-        </View>
+    <View className='main_container'>
+      <View
+        className='login_form'
+      >
+        <AtInput
+          autoFocus
+          className='login_input'
+          name='username'
+          type='text'
+          placeholder='Username'
+          value={state.username}
+          onChange={handleUsernameChange}
+        />
+        <AtInput
+          autoFocus
+          className='login_input'
+          name='password'
+          type='password'
+          placeholder='Password'
+          value={state.password}
+          onChange={handlePasswordChange}
+        />
+        <AtButton
+          className='login_submit'
+          size='small' onClick={handleSubmit}
+        >Login</AtButton>
       </View>
     </View>
   );

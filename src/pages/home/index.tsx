@@ -1,8 +1,8 @@
-import { View} from '@tarojs/components';
+import {View} from '@tarojs/components';
 import React, {useEffect} from 'react';
 import {AtButton} from "taro-ui";
 import {useStores} from "@/store";
-
+import {observer} from 'mobx-react'
 
 const Index: React.FC = () => {
   const {tabBarStore} = useStores();
@@ -11,8 +11,8 @@ const Index: React.FC = () => {
   }, []);
   return (
     <View>
-home
-      <AtButton type='primary' onClick={()=>{
+      home
+      <AtButton type='primary' onClick={() => {
         tabBarStore.setLoading(!tabBarStore.loading)
       }
       }
@@ -21,4 +21,4 @@ home
   );
 };
 
-export default Index;
+export default observer(Index);

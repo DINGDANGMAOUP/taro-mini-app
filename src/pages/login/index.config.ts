@@ -1,4 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '登入',
-  navigationBarBackgroundColor: '#afb0b2',
+  navigationBarTitleText: 'meet you',
+  navigationBarBackgroundColor: '#f3f4fe',
 })
