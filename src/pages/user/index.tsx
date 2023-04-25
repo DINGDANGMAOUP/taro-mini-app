@@ -48,8 +48,6 @@ const Index: React.FC = props => {
           />
         <View className='user__empty' />
       </View>
-
-
       <View className='user__activity'>
         <Activity />
       </View>
