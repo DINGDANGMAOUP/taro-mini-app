@@ -6,30 +6,15 @@
   height: 100vh;
 }
 
-//内容居中
-.login_title {
+.login_header {
   height: 45vh;
 }
-//垂直元素间隔50px
-.login_form{
-  height: 35vh;
+.login_content{
+  height: 25vh;
   padding-top: 50px;
 }
-.login_bottom{
-  height: 20vh;
-  background-color: aqua;
+.login_footer{
+  height: 30vh;
 }
-
-////透明 浮动 垂直水平居中
-//.login_form {
-//  width: 438px;
-//  height: 300px;
-//  position: absolute;
-//  top: 55%;
-//  left: 50%;
-//  transform: translate(-50%, -50%);
-//  border-radius: 10px;
-//}
-//
 
 
