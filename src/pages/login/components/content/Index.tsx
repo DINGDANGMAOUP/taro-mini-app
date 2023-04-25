@@ -1,7 +1,9 @@
 import React, {useEffect, useReducer} from "react";
+import {observer} from 'mobx-react'
 import {View} from "@tarojs/components";
 import {AtButton, AtInput} from "taro-ui";
 import Taro from "@tarojs/taro";
+import {useStores} from "@/store";
 import "./index.scss";
 
 const initialForm: LOGIN.FormType = {username: '', password: ''};
@@ -26,6 +28,8 @@ const reducer = (state: LOGIN.FormType, action: LOGIN.ActionType) => {
   throw Error('Unknown action: ' + action.type);
 }
 const Index: React.FC = () => {
+  const {userStore}=useStores()
+  const {loading}=userStore
   useEffect(() => {
     Taro.login().then(res => {
       console.log(res)
@@ -39,8 +43,10 @@ const Index: React.FC = () => {
     dispatch({nextPassword: password as string, type: 'password'})
   }
 
-  const handleSubmit = () => {
-
+  const handleSubmit =  () => {
+    console.log('login',state)
+    userStore.setLoading(true)
+    userStore.login(state.username,state.password)
   }
   return (
     <View className='form'>
@@ -68,6 +74,8 @@ const Index: React.FC = () => {
       </View>
       <View className='at-row at-row__justify--center'>
         <AtButton
+          loading={loading}
+          disabled={loading}
           className='login_submit'
           size='small' onClick={handleSubmit}
         >Login</AtButton>
@@ -76,4 +84,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default observer(Index);

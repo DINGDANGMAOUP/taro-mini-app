@@ -1,6 +1,9 @@
 export default {
-  'GET /api/user/1': {
-    name: "luckyadam"
+  'POST /api/login': {
+    success: true,
+    data: "asdaaaaaaaaaaaasdasdasdas",
+    errMessage: '',
+    errCode: 200,
   },
 
   'POST /api/upload': {

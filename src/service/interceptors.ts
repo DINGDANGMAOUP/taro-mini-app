@@ -9,10 +9,7 @@ const customInterceptor = (chain:any) => {
         switch(res.statusCode) {
             case HTTP_STATUS.SUCCESS:
                 const result = res.data
-                if(res.data.code === 200) {
-                    // 接口调通且无异常赋予success标识
-                    result.success = true
-                } else {
+                if(res.data.code != 200){
                     // 请求接口错误提示，可通过参数中加入 tips: false 关闭
                     if(requestParams.tips && result.errMessage) Taro.showToast({ title: result.errMessage, icon: 'none' })
                     // 登录过期或未登录 需要与后端共同定义
