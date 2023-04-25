@@ -1,5 +1,4 @@
 import React, {useEffect, useReducer} from "react";
-import {observer} from 'mobx-react'
 import {View} from "@tarojs/components";
 import {AtButton, AtInput} from "taro-ui";
 import Taro from "@tarojs/taro";
@@ -84,4 +83,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default observer(Index);
+export default Index;
