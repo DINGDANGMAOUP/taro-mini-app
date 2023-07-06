@@ -1476,6 +1476,14 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@taro-hooks/plugin-react@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmmirror.com/@taro-hooks/plugin-react/-/plugin-react-2.0.2.tgz#7bb7a4922a8491659e1b182eb3e288ae54545ae6"
+  integrity sha512-Re4nAxIrWLD8Bj+Q98vPQM8VCa4zF7aQfdPyoo2f1I20wuDdAoHSigIs6+Hu/1VfTJ7ck0wjaUsR92z+HNgsFg==
+  dependencies:
+    acorn "^8.8.2"
+    acorn-walk "^8.2.0"
+
 "@tarojs/api@3.6.4":
   version "3.6.4"
   resolved "https://registry.npmmirror.com/@tarojs/api/-/api-3.6.4.tgz#65d999ba377dc1904e0f2fe3ae9b53aa26d8abce"
